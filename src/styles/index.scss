@@ -1,0 +1,25 @@
+// scss支持模块化
+// config
+@import 'variables';
+// layout->noramlize
+@import 'reboot';
+// mixin
+@import 'mixin';
+//icon
+@import '../components/Icon/styles/index';
+// animation
+@import '../components/Transition/style/animation';
+// button
+@import '../components/Button/styles/index';
+// menu
+@import '../components/Menu/styles/index';
+//alert
+@import '../components/Alert/styles/index';
+// Input
+@import '../components/Input/styles/index';
+// autocomplete
+@import '../components/Autocomplete/styles/index';
+// upload
+@import '../components/Upload/styles/index';
+// progress
+@import '../components/Progress/style/index';

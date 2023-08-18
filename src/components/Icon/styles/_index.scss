@@ -1,0 +1,5 @@
+@each $key, $value in $theme-colors {
+  .oc-icon-#{$key} {
+    color: $value;
+  }
+}

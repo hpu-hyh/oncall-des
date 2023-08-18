@@ -1,0 +1,69 @@
+.oc-alert {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 12px;
+  padding: 5px 10px;
+  word-wrap: break-word;
+  border-radius: $border-radius-lg;
+  min-width: 200px;
+  max-width: 300px;
+  width: fit-content;
+  opacity: 1;
+  .oc-title {
+    width: 100%;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      .title-icon {
+        margin-right: 5px;
+        font-size: 13px;
+      }
+    }
+
+    .times-icon {
+      color: #9f9d8f;
+    }
+  }
+  .oc-description {
+    width: 100%;
+  }
+  // 主题色
+  @each $class, $theme in $alert-theme-colors {
+    &-#{$class} {
+      background-color: #{$theme};
+    }
+  }
+  // dark->主题色
+  @each $class, $theme in $alert-dark-colors {
+    &-#{$class}.oc-alert-dark {
+      background-color: #{$theme};
+    }
+  }
+
+  // icon->color
+  @each $class, $theme in $alert-icon-colors {
+    &-#{$class}.oc-alert-dark {
+      .title {
+        .title-icon {
+          color: #{$theme};
+          margin-right: 5px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  // dark->border
+  @each $class, $theme in $alert-theme-colors {
+    &-#{$class}.oc-alert-dark {
+      border: 1px solid #{$theme};
+    }
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s;
+}

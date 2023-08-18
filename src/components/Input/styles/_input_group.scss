@@ -1,0 +1,29 @@
+.oc-input-group-prepend,
+.oc-input-group-append {
+  display: flex;
+  align-items: center;
+  padding: $input-padding-y $input-padding-x;
+  margin-bottom: 0; // Allow use of <label> elements by overriding our default margin-bottom
+  font-size: $input-font-size; // Match inputs
+  font-weight: $font-weight-normal;
+  line-height: $input-line-height;
+  color: $input-group-addon-color;
+  text-align: center;
+  white-space: nowrap;
+  background-color: $input-group-addon-bg;
+  border: $input-border-width solid $input-group-addon-border-color;
+  border-radius: $input-border-radius;
+}
+.oc-input-group-append + .btn {
+  padding: 0;
+  border: 0;
+}
+.input-group > .oc-input-group-prepend,
+.input-group.input-group-append > .oc-input {
+  @include border-right-radius(0);
+}
+
+.input-group > .oc-input-group-append,
+.input-group.input-group-prepend > .oc-input {
+  @include border-left-radius(0);
+}

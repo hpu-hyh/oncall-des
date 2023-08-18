@@ -1,0 +1,109 @@
+{
+  "name": "oncall-des",
+  "version": "0.1.2",
+  "description": "React components library",
+  "author": "Curry H",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "keywords": [
+    "Components",
+    "React",
+    "UI"
+  ],
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/hpu-hyh/oncall",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hpu-hyh/oncall"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "axios": "^1.4.0",
+    "classnames": "^2.3.2",
+    "node-sass": "^9.0.0",
+    "react-transition-group": "^4.4.5",
+    "web-vitals": "^2.1.4"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
+  },
+  "scripts": {
+    "start": "craco start",
+    "clear": "rimraf ./dist",
+    "build": "npm run clear && npm run build-ts && npm run build-css",
+    "test": "react-scripts test",
+    "test:nowatch": "cross-env CI=true react-scripts test",
+    "eject": "react-scripts eject",
+    "build-ts": "tsc -p tsconfig.build.json",
+    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
+    "lint": "eslint --fix src/**/*.{js,ts,tsx}",
+    "prettier": "prettier --write .",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "prepublish": "npm run build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "shared-config"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^7.2.3",
+    "@storybook/addon-essentials": "^7.2.3",
+    "@storybook/addon-interactions": "^7.2.3",
+    "@storybook/addon-links": "^7.2.3",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/addons": "^7.2.3",
+    "@storybook/blocks": "^7.2.3",
+    "@storybook/preset-create-react-app": "^7.2.2",
+    "@storybook/react": "^7.2.3",
+    "@storybook/react-webpack5": "^7.2.3",
+    "@storybook/testing-library": "^0.2.0",
+    "@types/react-transition-group": "^4.4.6",
+    "@types/tapable": "^2.2.3",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "craco": "^0.0.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-storybook": "^0.6.13",
+    "husky": "^8.0.3",
+    "prettier": "^3.0.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "rimraf": "^5.0.1",
+    "sass": "^1.64.2",
+    "sass-loader": "^13.3.2",
+    "storybook": "^7.2.3",
+    "webpack": "^5.88.2"
+  }
+}
