@@ -28,6 +28,8 @@
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
     "node-sass": "^9.0.0",
+    "react-router": "^6.15.0",
+    "react-router-dom": "^6.15.0",
     "react-transition-group": "^4.4.5",
     "web-vitals": "^2.1.4"
   },

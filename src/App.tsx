@@ -14,29 +14,22 @@ import React from 'react'
 // import Transition from './components/Transition/transition'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import Input from './components/Input/Input'
+
+// import Input from './components/Input/Input'
+
+import BreadcrumbItem from './components/Breadcrumb/BreadcrumbItem'
+import Breadcrumb from './components/Breadcrumb/Breadcrumb'
 library.add(fas)
 
 function App() {
   return (
     <div className='App'>
-      <div className='alert'>
-        {/* <Button btnType='primary'>button</Button> */}
-        {/* <Alert
-          type='success'
-          message='HYH'
-          description='holleword alert'
-          showIcon
-        /> */}
-        {/* <Menu>
-          <MenuItem>11111</MenuItem>
-          <MenuItem>11111</MenuItem>
-          <MenuItem>11111</MenuItem>
-          <MenuItem>11111</MenuItem>
-        </Menu> */}
-        {/* <Input prepend='hyh' append='hyh' /> */}
-        <Input icon={'times'} />
-      </div>
+      <Breadcrumb>
+        <BreadcrumbItem>首页</BreadcrumbItem>
+        <BreadcrumbItem>首页</BreadcrumbItem>
+        <BreadcrumbItem>首页</BreadcrumbItem>
+        <BreadcrumbItem>首页</BreadcrumbItem>
+      </Breadcrumb>
     </div>
   )
 }

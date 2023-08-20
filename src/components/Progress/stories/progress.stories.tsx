@@ -18,6 +18,7 @@ type Story = StoryObj<typeof Progress>
 
 export const Def: Story = {
   args: {
-    percent: 20
+    percent: 20,
+    showText: true
   }
 }

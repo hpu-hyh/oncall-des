@@ -1,0 +1,24 @@
+.oc-breadcrumb {
+  display: flex;
+  font-size: $font-size-sm;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.45);
+  .oc-breadcrumb-items {
+    margin-right: 5px;
+    display: flex;
+    .oc-breadcrumb-item {
+      padding: 0 5px;
+      margin-right: 5px;
+      &:hover {
+        color: rgba(0, 0, 0, 0.88);
+        background-color: rgba(0, 0, 0, 0.06);
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+    // .oc-separator:last-child {
+    //   opacity: 0;
+    // }
+  }
+}

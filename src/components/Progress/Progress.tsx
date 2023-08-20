@@ -1,7 +1,10 @@
 import React from 'react'
 import type { FC } from 'react'
 import { ProgressProps } from './type'
-
+/**
+ *
+ *Progress组件,显示进度
+ */
 const Progress: FC<ProgressProps> = (props) => {
   const { percent, strokeHeight, showText, styles, theme } = props
   return (
