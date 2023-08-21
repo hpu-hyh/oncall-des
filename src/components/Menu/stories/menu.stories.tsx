@@ -17,7 +17,7 @@ const cpns = () => [
 ]
 
 const meta: Meta<typeof Menu> = {
-  title: 'Menu',
+  title: '导航/Menu',
   component: Menu,
 
   //👇 Enables auto-generated documentation for the component story

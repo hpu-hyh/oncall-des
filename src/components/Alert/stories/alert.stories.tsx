@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import Alert from '../Alert'
 
 const meta: Meta<typeof Alert> = {
-  title: 'Alert',
+  title: '反馈/Alert',
   component: Alert,
   //👇 Enables auto-generated documentation for the component story
   tags: ['autodocs']

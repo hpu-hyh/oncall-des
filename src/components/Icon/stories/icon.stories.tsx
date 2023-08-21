@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import Icon from '../Icon'
 
 const meta: Meta<typeof Icon> = {
-  title: 'Icon',
+  title: '基础组件/Icon',
   component: Icon,
 
   //👇 Enables auto-generated documentation for the component story

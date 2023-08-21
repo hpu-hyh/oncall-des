@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import Button from '../Button'
 
 const meta: Meta<typeof Button> = {
-  title: 'Button',
+  title: '基础组件/Button',
   component: Button,
   //👇 Enables auto-generated documentation for the component story
   tags: ['autodocs']

@@ -1,9 +1,10 @@
+import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import Input from '../Input'
+import Backtop from '../Backtop'
 
-const meta: Meta<typeof Input> = {
-  title: 'Form表单组件/Input',
-  component: Input,
+const meta: Meta<typeof Backtop> = {
+  title: '导航/Backtop',
+  component: Backtop,
 
   //👇 Enables auto-generated documentation for the component story
   tags: ['autodocs']
@@ -13,13 +14,8 @@ const meta: Meta<typeof Input> = {
 }
 
 export default meta
-type Story = StoryObj<typeof Input>
+type Story = StoryObj<typeof Backtop>
 
 export const Def: Story = {
-  args: {
-    prepend: '',
-    append: '',
-    disabled: false,
-    icon: 'search'
-  }
+  args: {}
 }

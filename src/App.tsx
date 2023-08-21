@@ -19,17 +19,19 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 
 import BreadcrumbItem from './components/Breadcrumb/BreadcrumbItem'
 import Breadcrumb from './components/Breadcrumb/Breadcrumb'
+import Backtop from './components/Backtop/Backtop'
 library.add(fas)
 
 function App() {
   return (
     <div className='App'>
-      <Breadcrumb>
+      {/* <Breadcrumb>
         <BreadcrumbItem>首页</BreadcrumbItem>
         <BreadcrumbItem>首页</BreadcrumbItem>
         <BreadcrumbItem>首页</BreadcrumbItem>
         <BreadcrumbItem>首页</BreadcrumbItem>
-      </Breadcrumb>
+      </Breadcrumb> */}
+      <Backtop></Backtop>
     </div>
   )
 }

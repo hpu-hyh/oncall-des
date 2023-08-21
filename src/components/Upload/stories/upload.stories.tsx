@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions'
 import Upload from '../Upload'
 
 const meta: Meta<typeof Upload> = {
-  title: 'Upload',
+  title: 'Form表单组件/Upload',
   component: Upload,
 
   //👇 Enables auto-generated documentation for the component story

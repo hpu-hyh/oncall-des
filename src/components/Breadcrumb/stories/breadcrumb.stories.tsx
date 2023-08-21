@@ -5,7 +5,7 @@ import Breadcrumb from '../Breadcrumb'
 import BreadcrumbItem from '../BreadcrumbItem'
 
 const meta: Meta<typeof Breadcrumb> = {
-  title: 'Breadcrumb',
+  title: '导航/Breadcrumb',
   component: Breadcrumb,
 
   //👇 Enables auto-generated documentation for the component story

@@ -1,0 +1,21 @@
+.oc-backtop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  color: $primary;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px;
+  // display: none;
+  &:hover {
+    background-color: #f2f6fc;
+  }
+  .backtop-icon {
+    color: $primary;
+  }
+}
