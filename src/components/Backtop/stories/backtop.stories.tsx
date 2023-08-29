@@ -17,5 +17,7 @@ export default meta
 type Story = StoryObj<typeof Backtop>
 
 export const Def: Story = {
-  args: {}
+  args: {
+    visibilityHeight: 400
+  }
 }
