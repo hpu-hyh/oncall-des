@@ -14,24 +14,30 @@ import React from 'react'
 // import Transition from './components/Transition/transition'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
+library.add(fas)
+import Tabs from './components/Tabs/Tabs'
+import Panel from './components/Tabs/Panel'
 
 // import Input from './components/Input/Input'
 
 // import BreadcrumbItem from './components/Breadcrumb/BreadcrumbItem'
 // import Breadcrumb from './components/Breadcrumb/Breadcrumb'
-import Backtop from './components/Backtop/Backtop'
-library.add(fas)
+// import Backtop from './components/Backtop/Backtop'
 
 function App() {
   return (
-    <div className='App' style={{ height: '3000px' }}>
-      {/* <Breadcrumb>
-        <BreadcrumbItem>首页</BreadcrumbItem>
-        <BreadcrumbItem>首页</BreadcrumbItem>
-        <BreadcrumbItem>首页</BreadcrumbItem>
-        <BreadcrumbItem>首页</BreadcrumbItem>
-      </Breadcrumb> */}
-      <Backtop />
+    <div className='App'>
+      <Tabs>
+        <Panel label='tab1' name='tab1'>
+          tab1
+        </Panel>
+        <Panel label='tab2' name='tab2'>
+          tab2
+        </Panel>
+        <Panel label='tab3' name='tab3'>
+          tab3
+        </Panel>
+      </Tabs>
     </div>
   )
 }
