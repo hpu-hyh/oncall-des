@@ -1,0 +1,45 @@
+.oc-pagination {
+  margin-top: 20px;
+  user-select: none;
+  .pagination-items {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    > .pagination-item {
+      margin: 0 6px;
+      border: 1px solid transparent;
+      border-radius: $border-radius-sm;
+      cursor: pointer;
+      &.is-active {
+        color: $primary;
+        border: 1px solid $primary;
+      }
+    }
+    > .pagination-item a {
+      display: inline-block;
+      padding: 0 7px;
+      text-decoration: none;
+      border-radius: $border-radius-sm;
+      &:hover {
+        background-color: $gray-300;
+      }
+    }
+    .pagination-left,
+    .pagination-right {
+      font-size: 15px;
+      border: 1px solid transparent;
+      border-radius: $border-radius-sm;
+      .angle-left,
+      .angle-right {
+        display: block;
+        position: relative;
+        border-radius: $border-radius-sm;
+        padding: 3px 6px;
+        cursor: pointer;
+        &:hover {
+          background-color: $gray-300;
+        }
+      }
+    }
+  }
+}
