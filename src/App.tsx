@@ -27,7 +27,7 @@ import Pagination from './components/Pagination/Pagination'
 function App() {
   return (
     <div className='App'>
-      <Pagination total={5} />
+      <Pagination total={10} />
     </div>
   )
 }
