@@ -14,29 +14,30 @@ const Pagination: FC<IProps> = (props) => {
 
   const handleClick = (index: React.SetStateAction<number>) => {
     setIsActive(index)
-    console.log(isActive)
   }
   const leftHandleClick = () => {
     if (isActive > 0) {
-      setIsActive(isActive - 1)
+      const newIsActive = isActive - 1
+      setIsActive(newIsActive)
     } else {
       setIsActive(total - 1)
     }
-    console.log(isActive)
   }
+
   const rightHandleClick = () => {
     if (isActive < total - 1) {
-      setIsActive(isActive + 1)
+      const newIsActive = isActive + 1
+      setIsActive(newIsActive)
     } else {
       setIsActive(0)
     }
-
-    console.log(isActive)
   }
+
   const paginationItemsList: number[] = []
   for (let i = 1; i <= total; i++) {
     paginationItemsList.push(i)
   }
+  console.log(isActive)
 
   const renderPaginationItem = () => {
     return paginationItemsList.map((item, index) => (
