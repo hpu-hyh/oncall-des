@@ -42,8 +42,6 @@ const Pagination: FC<IProps> = (props) => {
     if (isActive > 0) {
       const newIsActive = isActive
       handleClick(newIsActive)
-    } else {
-      handleClick(total)
     }
   }
 
@@ -51,8 +49,6 @@ const Pagination: FC<IProps> = (props) => {
     if (isActive < total - 1) {
       const newIsActive = isActive + 2
       handleClick(newIsActive)
-    } else {
-      handleClick(1)
     }
   }
 
