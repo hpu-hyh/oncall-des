@@ -6,8 +6,8 @@ import Icon from '../Icon'
 interface IProps {
   defaultCurrent?: number
   total: number
-  currentPage?: number
   groupCount?: number
+  simple?: boolean
 }
 
 const Pagination: FC<IProps> = (props) => {
@@ -15,10 +15,12 @@ const Pagination: FC<IProps> = (props) => {
     defaultCurrent = 0,
     total,
     // currentPage = 0,
-    groupCount = 5
+    groupCount = 5,
+    simple
   } = props
   const [isActive, setIsActive] = useState(defaultCurrent)
   const [startPage, setStartPage] = useState(1)
+  const [inputValue, setInputVlaue] = useState(1)
 
   const handleClick = (index: number) => {
     if (index + 5 >= total) {
@@ -56,7 +58,6 @@ const Pagination: FC<IProps> = (props) => {
   for (let i = 1; i <= total; i++) {
     paginationItemsList.push(i)
   }
-  console.log(isActive)
 
   const renderPaginationItem = () => {
     if (total <= 10) {
@@ -139,18 +140,45 @@ const Pagination: FC<IProps> = (props) => {
       return pages
     }
   }
+  const renderPaginationSelectorItem = () => {
+    return (
+      <div className='pagination-selector'>
+        <p>10 / 页</p>
+      </div>
+    )
+  }
+  const renderSimplePaginationItem = () => {
+    return (
+      <div className='simple-pager'>
+        <input type='text' value={isActive} /> <p>/</p> {total}
+      </div>
+    )
+  }
 
   return (
     <div className='oc-pagination'>
-      <ul className='pagination-items'>
-        <li className='pagination-left' onClick={leftHandleClick}>
-          <Icon icon='angle-left' className='angle-left' />
-        </li>
-        {renderPaginationItem()}
-        <li className='pagination-right' onClick={rightHandleClick}>
-          <Icon icon='angle-right' className='angle-right' />
-        </li>
-      </ul>
+      {simple ? (
+        <ul className='pagination-items'>
+          <li className='pagination-left' onClick={leftHandleClick}>
+            <Icon icon='angle-left' className='angle-left' />
+          </li>
+          {renderSimplePaginationItem()}
+          <li className='pagination-right' onClick={rightHandleClick}>
+            <Icon icon='angle-right' className='angle-right' />
+          </li>
+        </ul>
+      ) : (
+        <ul className='pagination-items'>
+          <li className='pagination-left' onClick={leftHandleClick}>
+            <Icon icon='angle-left' className='angle-left' />
+          </li>
+          {renderPaginationItem()}
+          <li className='pagination-right' onClick={rightHandleClick}>
+            <Icon icon='angle-right' className='angle-right' />
+          </li>
+          {total > 50 ? renderPaginationSelectorItem() : null}
+        </ul>
+      )}
     </div>
   )
 }

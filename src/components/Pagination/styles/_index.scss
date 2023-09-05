@@ -46,4 +46,14 @@
       }
     }
   }
+  .pagination-selector {
+    display: flex;
+    height: 25px;
+    width: 80px;
+    border: 1px solid $gray-400;
+    border-radius: 5px;
+    margin-left: 20px;
+    line-height: 22px;
+    justify-content: center;
+  }
 }
